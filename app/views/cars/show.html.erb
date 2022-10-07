@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="<% if @car.images.attached? %> 
+    <% @car.images.each do |image| %>
+     <%= image_tag image %>
+    <% end %>
+<% end %>
+  <div class="card-body">
+    <h5 class="card-title">CITY</h5>
+  </div>
+  <center>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= @car.brand%></li>
+    <li class="list-group-item"><%= @car.model%></li>
+    <li class="list-group-item">₹-<%= @car.price%></li>
+  </center>
+  </ul>
+</div>
+
+<%= link_to 'Review', new_car_review_path(@car)%>

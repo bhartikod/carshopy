@@ -1,0 +1,15 @@
+<%= form_for @review do |f| %>
+<div class="nested-fields">
+	<div class="fields">
+		 <div>
+    	<%= f.label :review, 'review: ' %>
+        <%= f.text_field :review %>
+    </div>
+    <div>
+        <%= link_to_remove_association "remove-review", f %>
+</div>
+
+    <%= f.submit%>
+<% end %>
+
+	

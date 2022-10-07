@@ -1,0 +1,29 @@
+
+<center><h1>Welcome to Carshopy</h1><center>
+
+<div class="card" style="width: 18rem; height: 350px;">
+    <% @homes.each do |car| %>
+    <% if car.images.attached? %> 
+        <% car.images.each do |image| %>
+        <%= image_tag image %>
+        <% end %>
+    <% end %> 
+    </div>
+  <div class="card-body" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+    <li><a href="<%= cars_path(car) %>">
+        <li class="list-group-item"><%= car.brand%>
+        <li class="list-group-item"><%= car.model%>
+        <li class="list-group-item"><%= car.price%>
+        </a>
+     </li> 
+  <% end %>
+  </ul>
+    
+  </div>
+  </div>
+</div>
+
+ 
+
+

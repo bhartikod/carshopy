@@ -1,0 +1,6 @@
+<% @ratings.each do |rating| %>
+    <li><a href="<%= ratings_path(rating) %>">
+        <%= rating.description%>
+        </a>
+     </li> 
+  <% end %>
